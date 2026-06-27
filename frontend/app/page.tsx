@@ -107,10 +107,10 @@ export default function Home() {
       <section className="relative min-h-[90vh] mt-20 flex flex-col items-center justify-center py-12 px-4">
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div
-            className={`absolute w-[500px] h-[500px] rounded-full blur-3xl top-0 -left-20 transition-all duration-700 bg-gradient-to-r ${currentEmotion.color} to-transparent opacity-60`}
+            className={`absolute w-[500px] h-[500px] rounded-full blur-2xl top-0 -left-20 transition-colors duration-700 bg-gradient-to-r ${currentEmotion.color} to-transparent opacity-40`}
           />
-          <div className="absolute w-[400px] h-[400px] rounded-full bg-secondary/10 blur-3xl bottom-0 right-0 animate-pulse" />
-          <div className="absolute inset-0 bg-background/80 backdrop-blur-3xl" />
+          <div className="absolute w-[400px] h-[400px] rounded-full bg-secondary/10 blur-2xl bottom-0 right-0 animate-pulse" />
+          <div className="absolute inset-0 bg-background/90 backdrop-blur-md" />
         </div>
         <Ripple className="opacity-60" />
 
@@ -179,7 +179,7 @@ export default function Home() {
             {/* Slider track */}
             <div className="relative px-2">
               <div
-                className={`absolute inset-0 bg-gradient-to-r ${currentEmotion.color} to-transparent blur-2xl -z-10 transition-all duration-500`}
+                className={`absolute inset-0 bg-gradient-to-r ${currentEmotion.color} to-transparent blur-md opacity-20 -z-10 transition-colors duration-500`}
               />
               <Slider
                 value={[emotion]}
