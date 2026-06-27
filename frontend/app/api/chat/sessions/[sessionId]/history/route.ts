@@ -39,6 +39,7 @@ export async function GET(
       role: msg.role,
       content: msg.content,
       timestamp: msg.timestamp,
+      metadata: msg.metadata,
     }));
 
     return NextResponse.json(formattedMessages);

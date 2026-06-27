@@ -406,7 +406,7 @@ End with exactly one follow-up question.
 export const getSessionHistory = async (req: Request, res: Response) => {
   try {
     const { sessionId } = req.params;
-    const userId = new Types.ObjectId(req.user.id);
+    const userId = new Types.ObjectId(req.user._id as string);
 
     const session = (await ChatSession.findOne({
       sessionId,
@@ -452,7 +452,7 @@ export const getChatSession = async (req: Request, res: Response) => {
 export const getChatHistory = async (req: Request, res: Response) => {
   try {
     const { sessionId } = req.params;
-    const userId = new Types.ObjectId(req.user.id);
+    const userId = new Types.ObjectId(req.user._id as string);
 
     const session = await ChatSession.findOne({ sessionId });
 
