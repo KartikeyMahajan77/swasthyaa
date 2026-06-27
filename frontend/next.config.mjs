@@ -1,19 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
-
-  experimental: {
-    appDir: true,
-    suppressHydrationWarning: true,
-    skipTypeChecking: true,
-    skipMiddlewareUrlNormalize: true,
-    missingSuspenseWithCSRBailout: false,
-  },
+  turbopack: {},
 
   reactStrictMode: false,
 
